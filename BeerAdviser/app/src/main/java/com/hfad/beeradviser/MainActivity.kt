@@ -10,23 +10,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val findBeer = findViewById<Button>(R.id.find_beer)
-        findBeer.setOnClickListener {
+        val findBook = findViewById<Button>(R.id.find_book)
+        findBook.setOnClickListener {
             //Code that runs when the button is clicked
-            val beerColor = findViewById<Spinner>(R.id.beer_color)
-            val color = beerColor.selectedItem
-            val beerList = getBeers(color.toString())
-            val beers = beerList.reduce { str, item -> str + '\n' + item }
+            val bookType = findViewById<Spinner>(R.id.book_type)
+            val type = bookType.selectedItem
+            val bookList = getBooks(type.toString())
+            val books = bookList.reduce { str, item -> str + '\n' + item }
             val brands = findViewById<TextView>(R.id.brands)
-            brands.text = beers
+            brands.text = books
         }
     }
-    fun getBeers(color: String): List<String> {
-        return when (color) {
-            "Light" -> listOf("Jail Pale Ale", "Lager Lite")
-            "Amber" -> listOf("Jack Amber", "Red Moose")
-            "Brown" -> listOf("Brown Bear Beer", "Bock Brownie")
-            else -> listOf("Gout Stout", "Dark Daniel")
+    fun getBooks(type: String): List<String> {
+        return when (type) {
+            "Horror" -> listOf("The Suffering", "The Lost Soul")
+            "Non Fiction" -> listOf("The Alchemist", "Prisoner B-3087")
+            "Literature" -> listOf("The Book Thief", "Wonder")
+            else -> listOf("You Are My Happy", "The One and Only Ivan")
         }
     }
 }

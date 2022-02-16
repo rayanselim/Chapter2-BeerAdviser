@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Beer Adviser</string>
-    <string name="find_beer">Find Beer</string>
-    <string name="brands">No beer selected</string>
-    <string-array name="beer_colors">
-        <item>Light</item>
-        <item>Amber</item>
-        <item>Brown</item>
-        <item>Dark</item>
+    <string name="app_name">Book Adviser</string>
+    <string name="find_beer">Find Book</string>
+    <string name="brands">No book selected</string>
+    <string-array name="book_types">
+        <item>Horror</item>
+        <item>Non Fiction</item>
+        <item>Literature </item>
+        <item>Easy Reading</item>
     </string-array>
 </resources>
